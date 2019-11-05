@@ -12,7 +12,7 @@ class Application
         resp.write "#{item}\n"
       end
     elsif req.path.match(/cart/)
-      if !@@cart.length == 0
+      if !@@cart.length > 0
         @@cart.each do |item|
           resp.write "#{item}\n"
         end
